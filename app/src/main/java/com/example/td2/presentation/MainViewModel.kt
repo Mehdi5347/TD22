@@ -24,10 +24,10 @@ class MainViewModel(
     }
 
     fun onClickedIncrement(emailUser: String) {
-        viewModelScope.launch(Dispatchers.IO) {
-            createUserUseCase.invoke(User(email= "test"))
+        viewModelScope.launch() {
+            createUserUseCase.invoke(User("test"))
             delay(timeMillis = 1000)
-            val user: User = getUserUseCase.invoke(email = "test")
+            val user = getUserUseCase.invoke("test")
             val debug = "debug"
         }
     }
