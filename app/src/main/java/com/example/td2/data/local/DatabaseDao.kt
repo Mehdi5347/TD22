@@ -8,14 +8,14 @@ import com.example.td2.data.local.models.UserLocal
 
 @Dao
 interface DatabaseDao {
-    @Query("SELECT * FROM UserLocal")
+    @Query("SELECT * FROM userlocal")
     fun getAll(): List<UserLocal>
 
-    @Query("SELECT * FROM userLocal WHERE email LIKE :email LIMIT 1")
-    fun findByName(email: String): UserLocal
+    @Query("SELECT * FROM userlocal WHERE email LIKE :email LIMIT 1")
+    fun findByName(email: String): UserLocal?
 
     @Insert
-    fun insert(users: UserLocal)
+    fun insert(user: UserLocal)
 
     @Delete
     fun delete(user: UserLocal)

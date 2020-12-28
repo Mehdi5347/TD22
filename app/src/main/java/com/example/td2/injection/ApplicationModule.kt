@@ -12,27 +12,25 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.core.module.Module
 import org.koin.dsl.module
 
-val presentationModule:Module = module {
 
-    factory{ MainViewModel(get(), get()) }
+val presentationModule = module {
+    factory { MainViewModel(get(), get()) }
+}
 
-    }
-
-val domainModule :Module = module {
+val domainModule = module {
     factory { CreateUserUseCase(get()) }
     factory { GetUserUseCase(get()) }
 }
 
-val dataModule :Module = module {
-    single{ UserRepository(get())}
-    single{createDatabase(androidContext())}
+val dataModule = module {
+    single { UserRepository(get()) }
+    single { createDataBase(androidContext()) }
 }
 
-fun createDatabase(context: Context): DatabaseDao {
-    val appDatabase: AppDatabase = Room.databaseBuilder(
+fun createDataBase(context: Context): DatabaseDao {
+    val appDatabase = Room.databaseBuilder(
         context,
         AppDatabase::class.java, "database-name"
     ).build()
-    return appDatabase.DatabaseDao()
+    return appDatabase.databaseDao()
 }
-

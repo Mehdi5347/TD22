@@ -5,10 +5,8 @@ import com.example.td2.domain.entity.User
 
 class GetUserUseCase(
     private val userRepository: UserRepository
-    ) {
-    suspend fun invoke(email: String) : User{
-       return userRepository.getUser(email)
-
-
+) {
+    suspend fun invoke(email: String) : User? {
+        return userRepository.getUser(email)
     }
 }
