@@ -6,7 +6,7 @@ import com.example.td2.domain.entity.User
 class CreateUserUseCase(
     private val userRepository: UserRepository
 ) {
-    suspend fun invoke(user: User){
-        userRepository.createUser(user)
+    suspend fun invoke(user: User, password: User){
+        userRepository.createUser(user, password)
     }
 }
