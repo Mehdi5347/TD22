@@ -17,9 +17,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         mainViewModel.loginLiveData.observe(this, Observer {
-            when(it){
+            when (it) {
                 is LoginSuccess -> {
-                    //TODO Navigate
+
                 }
                 LoginError -> {
                     MaterialAlertDialogBuilder(this)
@@ -34,7 +34,11 @@ class MainActivity : AppCompatActivity() {
             }
         })
         login_button.setOnClickListener {
-            mainViewModel.onClickedLogin(Login_edit.text.toString().trim(), password_edit.text.toString())
+            mainViewModel.onClickedLogin(Login_edit.text.toString().trim())
+
+        }
+        create_account_button.setOnClickListener {
+            mainViewModel.onClickedLogin(Login_edit.text.toString().trim())
         }
     }
 }
