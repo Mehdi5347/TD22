@@ -19,14 +19,16 @@ Dans cette application on pourras retrouvé une liste de légumes courrants dans
 
 ## Fonctionnalités:
 
-Premier ecran ( Ecran Home ) 
+Premier ecran ( Ecran Log in ) 
 
 
-
-On peut basculer sur l'ecran suivant en touchant le bouton
-
-Deuxieme ecran (liste)
+On a acces a un ecran de login avec un possibilité de création de compte en touchant le bouton "Inscription"
 
 
+Deuxieme ecran (Inscription)
+
+On peut inscrire sur cet écran un e-mail qui servira d'identifiant ainsi qu'un mot de passe et en touchant le bouton sign in les infos seront enregistré dans la BD
+
+Troisième écran (Liste)
 
 affiche une liste de fruits utilisees dans l'alimentation courrante avec une image a cote de chaque nom.
