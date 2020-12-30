@@ -22,13 +22,22 @@ Dans cette application on pourras retrouvé une liste de légumes courrants dans
 Premier ecran ( Ecran Log in ) 
 
 
+![Image 1](https://github.com/Mehdi5347/TD22/blob/master/blob/image1.PNG)
+
+
 On a acces a un ecran de login avec un possibilité de création de compte en touchant le bouton "Inscription"
+
 
 
 Deuxieme ecran (Inscription)
 
 On peut inscrire sur cet écran un e-mail qui servira d'identifiant ainsi qu'un mot de passe et en touchant le bouton sign in les infos seront enregistré dans la BD
 
+
 Troisième écran (Liste)
+
+
+![Image 3](https://github.com/Mehdi5347/TD22/blob/master/blob/image2.PNG)
+
 
 affiche une liste de fruits utilisees dans l'alimentation courrante avec une image a cote de chaque nom.
